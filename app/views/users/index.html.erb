@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+
+  <head>
+	<title>Finding stuff</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="assets/stylesheets/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css">
+	
+	<meta property="og:type" content="website" />
+
+	<meta property="og:site_title" content="places" />
+	<meta property="og:description" content="local business"/>
+	
+	
+	
+	
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key="AIzaSyC98tCsiNovmmmAsViv6yyPupI-gZB8gI4"></script>
+    <script language="javascript" type="text/javascript" src="assets/javascripts/map.js"></script>
+	<script language="javascript" type="text/javascript" src="assets/javascripts/search.js"></script>
+  </head>
+  <body>
+  
+	<div id="control">
+		<h2>Local</h2>
+		<p>00000</p>
+		<form method="get" id="chooseZip">
+
+			<button type="submit" class="learnButton">Use current location</button>
+			<button type="button" id="searchZip" class="learnButton">Search by Zip Code</button>
+			<div class="clear"></div>
+
+			<div class="zipSearch">
+				<input id="textZip" type="text" name="zip" placeholder="enter your zip code" autofocus>
+				<button type="submit" class="learnButton">Search</button>
+			</div>
+
+			<div class="addySearch">
+				<input id="textAddy" type="text" name="zip" placeholder="enter your Address" autofocus>
+				<button type="submit" class="learnButton">Search</button>
+			</div>
+
+			<div class="clear"></div>
+		</form>
+		
+		<p>some stuff</p>
+		
+		<div class="social">
+		
+			<div class="twitter">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-via="pauldessert">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</div>
+			
+			<div class="facebook">
+				<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.seedtip.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=21&amp;appId=752601418144350" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>		
+			</div>
+
+		
+		</div>
+		<div class="clear"></div>
+		<div id="results"></div>
+		
+	</div>
+	
+	<!-- an empty div for the map -->
+	<div id="map-canvas"></div>
+
+
+  </body>
+</html>
